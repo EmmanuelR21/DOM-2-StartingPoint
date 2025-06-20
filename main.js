@@ -5,3 +5,13 @@ root.addEventListener("click", (event) => {
   console.log(event.target.tagName);
   console.log(event.target);
 });
+
+const removeColumnButton = document.getElementById("remove-column");
+
+removeColumnButton.addEventListener("click", () => {
+  const columnsToDelete = document.getElementsByTagName("tr");
+
+  for (let i = 0; i < columnsToDelete.length; i++) {
+    columnsToDelete[i].children[0].remove();
+  }
+});
